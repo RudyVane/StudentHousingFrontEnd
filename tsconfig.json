@@ -24,8 +24,15 @@
       "dom"
     ]
   },
+  "files": [
+    "src/main.ts",
+    // Add the path to environment.ts
+    "src/app/environments/environment.ts"
+  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
+    "enableIvy": true,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

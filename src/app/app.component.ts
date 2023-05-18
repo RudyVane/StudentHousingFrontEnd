@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-project';
+  constructor(private router: Router) {}
+
+  showFormComponent() {
+    this.router.navigate(['/form']);
+  }
+
+  showRegisterComponent() {
+    this.router.navigate(['/register']);
+  }
 }
+
