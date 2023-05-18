@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
   submitForm() {
     if (this.form.valid) {
       const formData = JSON.stringify(this.form.value);
-      this.http.post('your_api_url', formData).subscribe(    //   hier moet onze api url komen
+      this.http.post('/register', formData).subscribe(
         (response) => {
           console.log('Form submission successful:', response);
           // Handle any success logic here
