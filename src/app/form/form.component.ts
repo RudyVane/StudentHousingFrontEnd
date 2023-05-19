@@ -42,7 +42,7 @@ export class FormComponent implements OnInit {
   submitForm() {
     if (this.form.valid) {
       const formData = JSON.stringify(this.form.value);
-      this.http.post('your_api_url', formData).subscribe(    //   hier moet onze api url komen
+      this.http.post('/property', formData).subscribe(
         (response) => {
           console.log('Form submission successful:', response);
           // Handle any success logic here
@@ -52,7 +52,8 @@ export class FormComponent implements OnInit {
           // Handle any error logic here
         }
       );
-    } else {
+    }
+   else {
       // Form is invalid, display error messages or take appropriate action
     }
   }
