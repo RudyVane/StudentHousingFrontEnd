@@ -15,25 +15,24 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.formFields = [
-      { label: 'First Name:', id: 'firstName', name: 'firstName', required: true },
-      { label: 'Last Name:', id: 'lastName', name: 'lastName', required: true },
+      { label: 'Username:', id: 'username', name: 'username', required: true },
       { label: 'Email:', id: 'email', name: 'email', required: true },
       { label: 'Password:', id: 'password', name: 'password', required: true },
-      { label: 'Confirm Password:', id: 'confirmPassword', name: 'confirmPassword', required: true }
+      { label: 'Confirm Password:', id: 'matching_password', name: 'matching_password', required: true }
     ];
 
     this.form = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-      confirmPassword: ['', Validators.required]
+      matching_password: ['', Validators.required]
     });
   }
 
   submitForm() {
     if (this.form.valid) {
       const formData = JSON.stringify(this.form.value);
+      console.log(formData);
       this.http.post('/register', formData).subscribe(
         (response) => {
           console.log('Form submission successful:', response);
