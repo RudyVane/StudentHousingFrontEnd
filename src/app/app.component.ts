@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   properties: any[] = [];
-  logoUrl: string = 'assets/logo.png';
+  logoUrl: string = 'assets/logoSH.png';
   constructor(private router: Router, private http: HttpClient) {}
 
   retrieveProperties(): void {
