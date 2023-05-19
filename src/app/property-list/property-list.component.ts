@@ -21,4 +21,5 @@ export class PropertyListComponent implements OnInit {
         this.properties = data;
       });
   }
+
 }

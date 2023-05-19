@@ -29,5 +29,7 @@ export class AppComponent {
   showListComponent() {
     this.router.navigate(['/property-list']);
   }
-
+  showUserAddComponent(){
+    this.router.navigate(['/user-advertisement']);
+  }
 }

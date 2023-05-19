@@ -22,7 +22,33 @@ export class FormComponent implements OnInit {
       latitude: ['', Validators.required],
       longitude: ['', Validators.required],
       description: ['', Validators.required],
-      cover_image_url: ['', Validators.required]
+      cover_image_url: ['', Validators.required],
+      postalCode: [''],
+      propertyType: [''],
+      rawAvailability: [''],
+      rentDetail: [''],
+      title: [''],
+      descriptionNonTranslated: [''],
+      descriptionTranslated: [''],
+      energyLabel: [''],
+      gender: [''],
+      internet: [''],
+      isRoomActive: [''],
+      kitchen: [''],
+      living: [''],
+      matchAge: [''],
+      matchCapacity: [''],
+      matchGender: [''],
+      matchLanguages: [''],
+      matchStatus: [''],
+      pageDescription: [''],
+      pageTitle: [''],
+      pets: [''],
+      registrationCost: [''],
+      roommates: [''],
+      shower: [''],
+      smokingInside: [''],
+      toilet: ['']
     });
   }
   formFields = [
@@ -35,9 +61,33 @@ export class FormComponent implements OnInit {
     { label: 'Latitude:', id: 'latitude', name: 'latitude', required: true },
     { label: 'Longitude:', id: 'longitude', name: 'longitude', required: true },
     { label: 'Description:', id: 'description', name: 'description', required: true },
-    { label: 'Cover image URL:', id: 'cover_image_url', name: 'cover_image_url', required: true }
-  ];
-
+    { label: 'Cover image URL:', id: 'cover_image_url', name: 'cover_image_url', required: true },
+    { label: 'Postal Code:', id: 'postalCode', name: 'postalCode' },
+    { label: 'Property Type:', id: 'propertyType', name: 'propertyType' },
+    { label: 'Raw Availability:', id: 'rawAvailability', name: 'rawAvailability' },
+    { label: 'Rent Detail:', id: 'rentDetail', name: 'rentDetail' },
+    { label: 'Title:', id: 'title', name: 'title' },
+    { label: 'Description (Non-Translated):', id: 'descriptionNonTranslated', name: 'descriptionNonTranslated' },
+    { label: 'Description (Translated):', id: 'descriptionTranslated', name: 'descriptionTranslated' },
+    { label: 'Energy Label:', id: 'energyLabel', name: 'energyLabel' },
+    { label: 'Gender:', id: 'gender', name: 'gender' },
+    { label: 'Internet:', id: 'internet', name: 'internet' },
+    { label: 'Is Room Active:', id: 'isRoomActive', name: 'isRoomActive' },
+    { label: 'Kitchen:', id: 'kitchen', name: 'kitchen' },
+    { label: 'Living:', id: 'living', name: 'living' },
+    { label: 'Match Age:', id: 'matchAge', name: 'matchAge' },
+    { label: 'Match Capacity:', id: 'matchCapacity', name: 'matchCapacity' },
+    { label: 'Match Gender:', id: 'matchGender', name: 'matchGender' },
+    { label: 'Match Languages:', id: 'matchLanguages', name: 'matchLanguages' },
+    { label: 'Match Status:', id: 'matchStatus', name: 'matchStatus' },
+    { label: 'Page Description:', id: 'pageDescription', name: 'pageDescription' },
+    { label: 'Page Title:', id: 'pageTitle', name: 'pageTitle' },
+    { label: 'Pets:', id: 'pets', name: 'pets' },
+    { label: 'Registration Costs:', id: 'registrationCost', name: 'registrationCost' },
+    { label: 'Roommates:', id: 'roommates', name: 'roommates' },
+    { label: 'Shower:', id: 'shower', name: 'shower' },
+    { label: 'Smoking Inside:', id: 'smokingInside', name: 'smokingInside'},
+    { label: 'Toilet:', id: 'toilet', name: 'toilet'}];
 
   submitForm() {
     if (this.form.valid) {
@@ -53,7 +103,7 @@ export class FormComponent implements OnInit {
         }
       );
     }
-   else {
+    else {
       // Form is invalid, display error messages or take appropriate action
     }
   }
